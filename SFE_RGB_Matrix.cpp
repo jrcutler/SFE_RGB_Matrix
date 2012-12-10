@@ -37,8 +37,8 @@ void SFE_RGB_Matrix::setPixel(uint8_t n, uint16_t color)
 
     // separate color components
     uint8_t red, green, blue;
-    red = (color >> 10) & MASK_5;
-    green = (color >> 4) & MASK_6;
+    red = (color >> 11) & MASK_5;
+    green = (color >> 5) & MASK_6;
     blue = color & MASK_5;
 
     // map colors to 12-bit (4/4/4) space
